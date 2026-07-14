@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Academy School Pakhanjore</title>
+
+<!-- ================================================
+     Everything is in ONE file now:
+     - CSS lives inside <style>...</style> in the head
+     - Each "page" is now a <section id="..."> in the body
+     - Nav links use #id instead of another .html file
+     ================================================ -->
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f7f7f2;
+    scroll-behavior: smooth; /* smooth jump when clicking nav links */
+  }
+
+  header {
+    background-color: #14532d;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  header h1 { font-size: 28px; margin-bottom: 5px; }
+  header p { font-size: 14px; color: #d9f2e3; }
+
+  nav {
+    background-color: #1e7a45;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+  }
+  nav a:hover { background-color: #145c33; }
+
+  main { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+
+  section { padding-top: 60px; margin-top: -60px; } /* offsets sticky nav */
+  section:not(:last-child) {
+    border-bottom: 2px dashed #ccc;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    color: #14532d;
+    border-bottom: 3px solid #1e7a45;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+  h3 { color: #1e7a45; margin: 20px 0 10px; }
+  p { margin-bottom: 15px; }
+
+  img { max-width: 100%; border-radius: 8px; display: block; margin: 10px 0; }
+  figure { margin: 20px 0; text-align: center; }
+  figcaption { font-size: 13px; color: #555; margin-top: 6px; font-style: italic; }
+
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: #1e7a45;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover { background-color: #145c33; }
+
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+  th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+  th { background-color: #e7f4ec; }
+
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  footer {
+    background-color: #14532d;
+    color: #fff;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  footer a { color: #d9f2e3; }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>🎓 Life Academy School, Pakhanjore</h1>
+    <p>Nurturing Minds &bull; Building Futures</p>
+  </header>
+
+  <!-- Nav links now point to section IDs on THIS page using # -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#academics">Academics</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ===================== HOME ===================== -->
+    <section id="home">
+      <h2>Welcome to Our School</h2>
+      <p>
+        Life Academy School is located in <strong>Pakhanjore</strong>, a town in the
+        Kanker district of Chhattisgarh, India. Since our founding, we have been
+        committed to providing quality education that combines strong academics,
+        moral values, and co-curricular growth for every student.
+      </p>
+
+      <figure>
+        <img src="https://picsum.photos/id/1076/800/400" alt="Front view of Life Academy School building">
+        <figcaption>Fig 1: The main school building of Life Academy School, Pakhanjore</figcaption>
+      </figure>
+
+      <h3>Why Choose Us?</h3>
+      <div class="gallery-grid">
+        <div class="card">
+          <h3>📘 Quality Education</h3>
+          <p>Experienced teachers and an updated curriculum for classes Nursery to 12.</p>
+        </div>
+        <div class="card">
+          <h3>🏆 Sports &amp; Activities</h3>
+          <p>A large playground and regular sports, art, and cultural events.</p>
+        </div>
+        <div class="card">
+          <h3>💻 Modern Facilities</h3>
+          <p>Computer lab, science labs, and a well-stocked library.</p>
+        </div>
+      </div>
+
+      <a class="btn" href="#contact">📞 Contact Us</a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <h2>About Our School</h2>
+      <p>
+        Life Academy School was established with a simple mission: to provide
+        every child in Pakhanjore and the surrounding villages with access to
+        good quality, affordable education. Over the years, we have grown into
+        one of the trusted schools in the region.
+      </p>
+
+      <figure>
+        <img src="https://picsum.photos/id/431/800/350" alt="Students studying in a classroom">
+        <figcaption>Fig 2: Students in one of our classrooms</figcaption>
+      </figure>
+
+      <h3>Our Mission</h3>
+      <p>
+        To provide holistic education that develops the intellectual, physical,
+        social, and moral capabilities of every student, preparing them to
+        become responsible citizens of India.
+      </p>
+
+      <h3>Our Vision</h3>
+      <p>
+        To be recognised as a centre of academic excellence in Kanker district,
+        known for discipline, innovation, and care for every learner.
+      </p>
+
+      <h3>Milestones</h3>
+      <table>
+        <tr><th>Year</th><th>Achievement</th></tr>
+        <tr><td>2005</td><td>Life Academy School founded with classes 1 to 5</td></tr>
+        <tr><td>2012</td><td>Extended up to Secondary level (Class 10)</td></tr>
+        <tr><td>2018</td><td>New science and computer labs inaugurated</td></tr>
+        <tr><td>2023</td><td>Extended up to Senior Secondary level (Class 12)</td></tr>
+      </table>
+    </section>
+
+    <!-- ===================== ACADEMICS ===================== -->
+    <section id="academics">
+      <h2>Academics</h2>
+      <p>
+        We follow a curriculum affiliated with the state education board,
+        covering classes from Nursery to Class 12. Subjects are taught by
+        qualified and experienced teachers, using both traditional and
+        technology-supported teaching methods.
+      </p>
+
+      <figure>
+        <img src="https://picsum.photos/id/180/800/350" alt="Science laboratory with equipment">
+        <figcaption>Fig 3: Our well-equipped science laboratory</figcaption>
+      </figure>
+
+      <h3>Classes Offered</h3>
+      <ul>
+        <li>Pre-Primary (Nursery, LKG, UKG)</li>
+        <li>Primary (Class 1 - 5)</li>
+        <li>Middle School (Class 6 - 8)</li>
+        <li>Secondary (Class 9 - 10)</li>
+        <li>Senior Secondary (Class 11 - 12) - Science &amp; Commerce streams</li>
+      </ul>
+
+      <h3>Key Subjects</h3>
+      <table>
+        <tr><th>Subject</th><th>Focus Area</th></tr>
+        <tr><td>Computer Science</td><td>Basics of HTML, Python programming, and digital literacy</td></tr>
+        <tr><td>Science</td><td>Physics, Chemistry, and Biology with practical lab work</td></tr>
+        <tr><td>Mathematics</td><td>Algebra, Geometry, and everyday problem solving</td></tr>
+        <tr><td>Languages</td><td>English, Hindi, and regional language studies</td></tr>
+      </table>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <p>A few glimpses of life at Life Academy School, Pakhanjore.</p>
+
+      <div class="gallery-grid">
+        <figure>
+          <img src="https://picsum.photos/id/1000/400/300" alt="School playground">
+          <figcaption>Playground</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/id/1012/400/300" alt="Students in a group activity">
+          <figcaption>Group Activity</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/id/1074/400/300" alt="School library">
+          <figcaption>Library</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/id/1025/400/300" alt="Annual day celebration">
+          <figcaption>Annual Day Celebration</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/id/1035/400/300" alt="Computer lab">
+          <figcaption>Computer Lab</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/id/1041/400/300" alt="Sports day">
+          <figcaption>Sports Day</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>We would love to hear from you! Reach out using the details below or fill in the form.</p>
+
+      <div class="card">
+        <h3>📍 Address</h3>
+        <p>Life Academy School, Main Road, Pakhanjore, Kanker District, Chhattisgarh, India</p>
+
+        <h3>📞 Phone</h3>
+        <p>+91 98765 43210</p>
+
+        <h3>✉️ Email</h3>
+        <p><a href="mailto:info@lifeacademypakhanjore.example">info@lifeacademypakhanjore.example</a></p>
+      </div>
+
+      <h3>Send Us a Message</h3>
+      <form action="#" method="post" class="card">
+        <label for="name"><strong>Full Name</strong></label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+        <label for="email"><strong>Email</strong></label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+        <label for="message"><strong>Message</strong></label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here"></textarea><br>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <p>
+        Read more about our location on
+        <a href="https://en.wikipedia.org/wiki/Pakhanjore" target="_blank">Wikipedia</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Life Academy School, Pakhanjore. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
